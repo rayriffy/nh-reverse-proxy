@@ -1,0 +1,13 @@
+{
+  "name": "nh-reverse-proxy",
+  "version": "1.0.0",
+  "description": "Rever proxy for NHentai",
+  "main": "index.js",
+  "repository": "https://github.com/rayriffy/nh-reverse-proxy.git",
+  "author": "Phumrapee Limpianchop <contact@rayriffy.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "http-proxy": "^1.17.0"
+  }
+}
