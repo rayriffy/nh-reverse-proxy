@@ -1,13 +1,15 @@
+const cors = require('cors');
 const express = require('express');
-const httpProxy = require('http-proxy');
+const proxy = require('http-proxy-middleware')
 
 const server = express();
-const apiProxy = httpProxy.createProxyServer();
 
 const apiEndpoint = 'https://nhentai.net'
 
-server.all('*', function (req, res) {
-  apiProxy.web(req, res, {target: apiEndpoint})
-})
+server.use(cors())
+
+server.use('*', proxy({ target: apiEndpoint, changeOrigin: true }))
+
+server.listen(3000)
 
 module.exports = server
