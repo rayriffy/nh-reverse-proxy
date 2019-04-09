@@ -4,6 +4,7 @@
   "builds": [
       { "src": "**/*.js", "use": "@now/node" }
   ],
+  "regions": ["hnd1", "iad1", "bru1"],
   "routes": [
     {
       "src": "/.*",
